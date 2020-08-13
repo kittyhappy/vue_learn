@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-bind</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .active{
+            border: 1px solid red ;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- v-bind绑定属性 -->
+        <!-- <img v-bind:src="imgSrc" alt="dongfang.jpg" v-bind:title="imgTitle"> -->
+        <!-- 简写 -->
+         <img :src="imgSrc" alt="dongfang.jpg" :title="imgTitle" :class="{active:isActive}" @click="changeActive">
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+               imgSrc:"https://img.xiaozhanghappy.cn/images/2020/05/11/dongfang.jpg",
+               imgTitle:"东方",
+               isActive:false
+            },
+            methods: {
+                changeActive: function () {
+                    this.isActive=!this.isActive
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

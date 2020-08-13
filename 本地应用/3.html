@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-if示例</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <div id="app">
+        <button @click="changeShow">v-if示例</button>
+        <p v-if="isShow">ztc<br>
+            <img src='https://yunpan.xiaozhanghappy.cn/view/Image/33176025.jpg' v-show="isShow" />
+        </p>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                isShow: false,
+            },
+            methods: {
+                changeShow: function () {
+                    this.isShow = !this.isShow
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

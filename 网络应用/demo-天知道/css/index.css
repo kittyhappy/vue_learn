@@ -1,0 +1,38 @@
+.search_form{
+    width: 600px;
+    margin: 0 auto;
+}
+.search_form{
+    text-align: center;
+}
+.search_log{
+    width: 400px;
+    height: 50px;
+}
+.input_txt{
+    width: 525px;
+    line-height: 20px;
+}
+.input_sub{
+    background-color: cornflowerblue;
+    line-height: 20px;
+}
+.hotkey a{
+    color: rgb(75, 65, 47);
+    text-decoration: none;
+    position:relative;
+    left: -220px;
+}
+
+.weather_list {
+    position: absolute;
+    left: 200px;
+    margin: 0 auto;
+}
+.weather_list li{
+    width: 170px;
+    height: 65px;
+    border-right: 1px;
+    list-style: none;
+    float: left;
+}

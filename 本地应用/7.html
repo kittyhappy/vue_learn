@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-model</title>
+    <!--v-model 获取和设置表单元素的值(双向绑定) -->
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="message"><br>
+        <span>{{message}}</span>
+    </div>
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+     <script>
+         var app=new Vue({
+             el:"#app",
+             data:{
+                 message:"程序员"
+             }
+         })
+     </script>
+</body>
+</html>

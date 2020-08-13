@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-text</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- v-text设置文本 -->
+        <h2 v-text="msg+'!'"></h2>
+        <h2 v-text="info+'!'"></h2>
+        <!-- v-html设置元素的innerHTML -->
+        <h2 v-html="content"></h2>
+        <!-- v-on为元素绑定事件 -->
+        <input type="button" value="v-on" v-on:click="doIt">
+        <input type="button" value="v-on" v-on:click="doIt">
+        <input type="button" value="v-on简化" @click="doIt">
+        <!-- 双击事件 -->
+        <input type="button" value="v-on双击事件" @dblclick="doIt">
+        <h2 @click="foodFu">{{food}}</h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                msg: "程序员",
+                info: "123",
+                content:"<a href='http://baidu.com''>添加超链a<a>",
+                food:"西红柿炒鸡蛋"
+            },
+            methods:{
+                doIt:function(){
+                    alert("v-on示例")
+                },
+                foodFu:function(){
+                   // console.log(this.food);
+                    this.food +="很好吃"
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

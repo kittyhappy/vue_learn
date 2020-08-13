@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-on简写</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <div id="input-num">
+        <button @click="sub">-</button>
+        <span>{{num}}</span>
+        <button @click="add">+</button>
+    </div>
+    <script>
+        var app=new Vue({
+            el:"#input-num",  //挂载点
+            data:{
+                num:1,
+            },
+            methods:{
+                add:function(){
+                    // console.log("add");
+                    if (this.num<10) {
+                        this.num++;
+                    }else{
+                        this.num=1;
+                    }
+                    
+                },
+                sub:function(){
+                    // console.log("sub");
+                    if (this.num>1) {
+                        this.num--;
+                    }else{
+                        alert("最小值为1，不能再减小了")
+                    }
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>

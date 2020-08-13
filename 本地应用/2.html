@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-show示例</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <div id="app">
+        <span @click="changeShow">改变v-show图片显示</span><br>
+        <img src='https://yunpan.xiaozhanghappy.cn/view/Image/33176025.jpg' v-show="isShow" />
+        <!-- <img src='https://yunpan.xiaozhanghappy.cn/view/Image/33176025.jpg' v-show="true"/> -->
+        <!-- v-if示例 -->
+        <br>
+       
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                isShow: false,
+            },
+            methods: {
+                changeShow: function () {
+                    this.isShow = !this.isShow
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
